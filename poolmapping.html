@@ -2,11 +2,60 @@
 <html lang="en">
   <head>
     <style>
+      html{
+        font-family: sans-serif;
+      }
+      table, td, th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
     </style>
   </head>  
   <body>
     <script type="text/javascript">
     </script>
+    <h3>
+      Pool Mapping
+    </h3>
+    <form action="/poolmapping" get="POST">
+      Pool barcode: <input type="text" name="employeeID">
+      <br>
+      Test barcodes:
+      <table id="testbarcodes">
+        <tr>
+          <th>
+            <input type="text" name="barcode">
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <input type="text" name="barcode2">
+          </th>
+          <button onclick="deleteRow()">
+            Delete row
+          </button>
+        </tr>
+      </table>
+      <button onclick="addRows()">
+        Add more rows
+      </button>
+      <br>
+      <input type="submit" value="Submit Pool">
+    </form>
+    <br>
+    <br>
+    <table>
+      <tr>
+        <td>Employee ID</td>
+        <td>Test Barcode</td>
+      </tr>
+      <!--INPUT-->
+    </table>
+    <form action="/pool" get="POST">
+      <input id="removedentries" hidden="true" value="">
+      <input type="submit" value="Delete">
+    </form>
   </body>
 </html>
+
 

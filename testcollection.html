@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <style>
-      table, td, th {
+      html{
         font-family: sans-serif;
+      }
+      table, td, th {
         border: 1px solid black;
         border-collapse: collapse;
       }
@@ -17,7 +19,9 @@
     </h3>
     <form action="/testcollection" get="POST">
       Employee ID: <input type="text" name="employeeID">
+      <br>
       Test barcode: <input type="text" name="barcode">
+      <br>
       <input type="submit" value="Add">
     </form>
     <br>
