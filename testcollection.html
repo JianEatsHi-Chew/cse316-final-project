@@ -3,6 +3,7 @@
   <head>
     <style>
       table, td, th {
+        font-family: sans-serif;
         border: 1px solid black;
         border-collapse: collapse;
       }
@@ -28,8 +29,8 @@
       </tr>
       <!--INPUT-->
     </table>
-    <form>
-      <input hidden="true">
+    <form action="/testcollection" get="POST">
+      <input id="removedentries" hidden="true" value="">
       <input type="submit" value="Delete">
     </form>
   </body>
