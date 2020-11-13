@@ -2,11 +2,42 @@
 <html lang="en">
   <head>
     <style>
+      html{
+        font-family: sans-serif;
+      }
+      table, td, th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
     </style>
   </head>  
   <body>
     <script type="text/javascript">
     </script>
+    <h3>
+      Test Collection
+    </h3>
+    <form action="/testcollection" get="POST">
+      Employee ID: <input type="text" name="employeeID">
+      <br>
+      Test barcode: <input type="text" name="barcode">
+      <br>
+      <input type="submit" value="Add">
+    </form>
+    <br>
+    <br>
+    <table>
+      <tr>
+        <td>Employee ID</td>
+        <td>Test Barcode</td>
+      </tr>
+      <!--INPUT-->
+    </table>
+    <form action="/testcollection" get="POST">
+      <input id="removedentries" hidden="true" value="">
+      <input type="submit" value="Delete">
+    </form>
   </body>
 </html>
+
 

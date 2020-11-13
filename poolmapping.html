@@ -2,19 +2,24 @@
 <html lang="en">
   <head>
     <style>
-      html{
+      html {
         font-family: sans-serif;
       }
-      table, td, th {
+      table,
+      td,
+      th, tr {
         border: 1px solid black;
         border-collapse: collapse;
       }
     </style>
-  </head>  
+  </head>
   <body>
     <script type="text/javascript">
-      function deleteRow(){
-        alert("clicked here")
+      function deleteRow() {
+        alert("clicked here");
+      }
+      function addRow() {
+        alert("clicked add here");
       }
     </script>
     <h3>
@@ -24,10 +29,10 @@
       <table>
         <tr>
           <td>
-            Pool barcode: 
+            Pool barcode:
           </td>
           <td>
-            <input type="text" name="employeeID">
+            <input type="text" name="employeeID" />
           </td>
         </tr>
         <tr>
@@ -36,25 +41,25 @@
           </td>
           <td>
             <table id="testbarcodes">
-            <tr>
-              <th>
-                <input type="text" name="barcode">
-                <a onclick="deleteRow()">
-                  Delete row
-                </a>
-              </th>
-            </tr>
-              <button onclick="addRows()">
+              <tr>
+                <th>
+                  <input type="text" name="barcode" />
+                  <a onclick="deleteRow()">
+                    Delete row
+                  </a>
+                </th>
+              </tr>
+            </table>
+            <button onclick="addRow()">
               Add more rows
             </button>
-          </table>
           </td>
         </tr>
       </table>
-      <input type="submit" value="Submit Pool">
+      <input type="submit" value="Submit Pool" />
     </form>
-    <br>
-    <br>
+    <br />
+    <br />
     <table>
       <tr>
         <td>Employee ID</td>
@@ -62,11 +67,10 @@
       </tr>
       <!--INPUT-->
     </table>
+
     <form action="/pool" get="POST">
-      <input id="removedentries" hidden="true" value="">
-      <input type="submit" value="Delete">
+      <input id="removedentries" hidden="true" value="" />
+      <input type="submit" value="Delete" />
     </form>
   </body>
 </html>
-
-
