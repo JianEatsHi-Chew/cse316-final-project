@@ -13,33 +13,44 @@
   </head>  
   <body>
     <script type="text/javascript">
+      function deleteRow(){
+        alert("clicked here")
+      }
     </script>
     <h3>
       Pool Mapping
     </h3>
     <form action="/poolmapping" get="POST">
-      Pool barcode: <input type="text" name="employeeID">
-      <br>
-      Test barcodes:
-      <table id="testbarcodes">
+      <table>
         <tr>
-          <th>
-            <input type="text" name="barcode">
-          </th>
+          <td>
+            Pool barcode: 
+          </td>
+          <td>
+            <input type="text" name="employeeID">
+          </td>
         </tr>
         <tr>
-          <th>
-            <input type="text" name="barcode2">
-          </th>
-          <button onclick="deleteRow()">
-            Delete row
-          </button>
+          <td>
+            Test barcodes:
+          </td>
+          <td>
+            <table id="testbarcodes">
+            <tr>
+              <th>
+                <input type="text" name="barcode">
+                <a onclick="deleteRow()">
+                  Delete row
+                </a>
+              </th>
+            </tr>
+              <button onclick="addRows()">
+              Add more rows
+            </button>
+          </table>
+          </td>
         </tr>
       </table>
-      <button onclick="addRows()">
-        Add more rows
-      </button>
-      <br>
       <input type="submit" value="Submit Pool">
     </form>
     <br>
