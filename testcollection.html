@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <style>
+      table, td, th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
     </style>
   </head>  
   <body>
@@ -15,14 +19,17 @@
       Test barcode: <input type="text" name="barcode">
       <input type="submit" value="Add">
     </form>
+    <br>
+    <br>
     <table>
       <tr>
-        <th>Employee ID</th>
+        <td>Employee ID</td>
         <td>Test Barcode</td>
       </tr>
       <!--INPUT-->
     </table>
     <form>
+      <input hidden="true">
       <input type="submit" value="Delete">
     </form>
   </body>

@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <h1>
-      Login For Lab Technicians
-    </h1>
     <style>
     </style>
   </head>  
-  <form action="action_page.php" method="post">
-
-  <div class="container">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <br><br>
-    <button type="collect">Login Collector</button>
-    <button type="submit">Login</button>
-  </div>
-
-</form>
-  
-  
-  
   <body>
     <script type="text/javascript">
     </script>
+    <h2>
+      Labtech Login Page
+    </h2>
+    <form method="POST" action="/testcollection">
+      Email: <input type="text" name="email">
+      <br>
+      Password: <input type="text" name="password">
+      <br>
+      <input type="submit" onclick="submit" value="Login Collector">
+      <input type="submit" formaction="/labhome" onclick="submit" value="Lab Login">
+    </form>
   </body>
 </html>
