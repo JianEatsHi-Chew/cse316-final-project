@@ -8,13 +8,15 @@
     <script type="text/javascript">
     </script>
     <h2>
-      Login Page
+      Labtech Login Page
     </h2>
-    <form>
+    <form method="POST" action="/testcollection">
       Email: <input type="text" name="email">
       <br>
       Password: <input type="text" name="password">
-      <input type="submit" onclick="submit"
+      <br>
+      <input type="submit" onclick="submit" value="Login Collector">
+      <input type="submit" formaction="/labhome" onclick="submit" value="Lab Login">
     </form>
   </body>
 </html>
