@@ -17,7 +17,8 @@
     <script type="text/javascript">
       rows = 0
       function deleteRow(r) {
-        table = document.getElementById("testbarcodes")
+        trRow = document.getElementById("barcode" + r)
+        trRow.remove()
       }
       
       function addRow() {
@@ -74,7 +75,7 @@
     </table>
 
     <form action="/pool" get="POST">
-      <input id="removedentries" hidden="true" value="" />
+      <input id="removedentries" hidden="true" name="removedentries" value="" />
       <input type="submit" value="Delete" />
     </form>
   </body>
