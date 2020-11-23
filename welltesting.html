@@ -13,6 +13,9 @@
   </head>  
   <body>
     <script type="text/javascript">
+      function pressedEdit() {
+        //make the editing panel open up
+      }
     </script>
     <h3>
       Well Testing
@@ -23,13 +26,30 @@
       <tr>
         <td>Well Barcode</td>
         <td>Pool Barcode</td>
-        <td>Result</td>
+        <td>Results</td>
       </tr>
       <!--INPUT-->
     </table>
-    <form action="/testcollection" get="POST">
+    <form action="/welltesting" get="POST">
+      <div class="container">
+      <label  style="font-family:sans-serif;" for="well barcode"><b>=Well Barcode</b></label>
+      <input  style="font-family:sans-serif;" type="text" name="well barcode" required>
+      <br>
+      <label  style="font-family:sans-serif;" for="psw"><b>Poll Barcode</b></label>
+      <input type="password" name="poll barcode" required>
+      <br>
+      <label  style="font-family:sans-serif;" for="psw"><b>Result</b></label>
+      
+        
+      <br>
+      <input  style="font-family:sans-serif;" type="submit" formaction="/employeehome" onclick="submit" value="Login">
+  </div>
+      
+    </form>
+    
+    <form action="/welltesting" get="POST">
       <input id="removedentries" hidden="true" value="">
-      <input type="submit" value="Edit">
+      <input id="edit" type="submit" value="Edit">
       <input type="submit" value="Delete">
     </form>
   </body>
