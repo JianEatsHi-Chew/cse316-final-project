@@ -15,12 +15,17 @@
   </head>
   <body>
     <script type="text/javascript">
+      int rows = 0
       function deleteRow() {
         alert("clicked here")
       }
       function addRow() {
         tr = document.createElement("tr")
         th = document.createElement("th")
+        input = document.createElement("input")
+        input.type = "text"
+        input.name = "barcode" + rows
+        
       }
     </script>
     <h3>
