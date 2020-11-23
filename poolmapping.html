@@ -17,20 +17,22 @@
     <script type="text/javascript">
       rows = 0
       function deleteRow(r) {
-        alert("clicked hersadse")
+        table = document.getElementById("testbarcodes")
       }
       
       function addRow() {
-        var trHtml = `<tr>
+        var trHtml = 
+            `<tr id="barcode${rows}">
                 <th>
-                  <input type="text" name="barcode + {rows}" />
-                  <a onclick="deleteRow()" type="button">
+                  <input type="text" name="barcode${rows}" />
+                  <a onclick="deleteRow(${rows})" type="button">
                     Delete row
                   </a>
                 </th>
               </tr>`
         table = document.getElementById("testbarcodes")
-        table.appendChild(tr)
+        table.innerHTML += trHtml
+        rows++
       }
     </script>
     <h3>
@@ -53,7 +55,7 @@
           <td>
             <table id="testbarcodes">
             </table>
-            <button onclick="addRow()">
+            <button onclick="addRow()" type="button">
               Add more rows
             </button>
           </td>
