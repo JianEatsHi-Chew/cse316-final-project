@@ -15,17 +15,25 @@
   </head>
   <body>
     <script type="text/javascript">
-      int rows = 0
-      function deleteRow() {
-        alert("clicked here")
+      rows = 0
+      function deleteRow(r) {
+        alert("clicked hersadse")
       }
+      
       function addRow() {
         tr = document.createElement("tr")
         th = document.createElement("th")
         input = document.createElement("input")
         input.type = "text"
         input.name = "barcode" + rows
-        
+        a = document.createElement("a")
+        a.onclick = function(){
+          alert("123")
+        }
+        th.append(input, a)
+        tr.appendChild(th)
+        table = document.getElementById("testbarcodes")
+        table.appendChild(tr)
       }
     </script>
     <h3>
