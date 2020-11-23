@@ -13,35 +13,24 @@
   </head>  
   <body>
     <script type="text/javascript">
-      function addRow(tableID) {
-      var poolCode = docuemnt.getElementByID()
+      function addRow(wellTable) {
+      var poolCode = docuemnt.getElementByID(poolcode);
+      var wellCode = document.getElementByID(wellcode);
         
 			var wellTable = document.getElementById(tableID);
 
 			var rowCount = wellTable.rows.length;
 			var row = wellTable.insertRow(rowCount);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      cell
+	
+      
 
-			var colCount = table.rows[0].cells.length;
-
-			for(var i=0; i<colCount; i++) {
-
-				var newcell	= row.insertCell(i);
-
-				newcell.innerHTML = wellTable.rows[0].cells[i].innerHTML;
-				//alert(newcell.childNodes);
-				switch(newcell.childNodes[0].type) {
-					case "text":
-							newcell.childNodes[0].value = "";
-							break;
-					case "checkbox":
-							newcell.childNodes[0].checked = false;
-							break;
-					case "select-one":
-							newcell.childNodes[0].selectedIndex = 0;
-							break;
-				}
+			
 			}
-		}
     </script>
     <h3>
       Well Testing
@@ -51,10 +40,10 @@
     <form action="/welltesting" get="POST">
       <div class="container">
       <label  style="font-family:sans-serif;" for="well barcode"><b>Well Barcode</b></label>
-      <input  style="font-family:sans-serif;" type="text" name="well barcode" required>
+      <input id="wellcode" style="font-family:sans-serif;" type="text" name="well barcode" required>
       <br>
       <label  style="font-family:sans-serif;" for="psw"><b>Poll Barcode</b></label>
-      <input name="poll barcode" required>
+      <input id="poolcode" name="poll barcode" required>
       <br>
       <label  style="font-family:sans-serif;" for="psw"><b>Result</b></label>
       <select name="situation" id="situation">
@@ -71,7 +60,7 @@
     <br>
     <br>
     
-    <table>
+    <table id="wellTable" border="1">
       <tr>
         <td>Well Barcode</td>
         <td>Pool Barcode</td>
