@@ -35,6 +35,11 @@
         table.innerHTML += trHtml
         rows++
       }
+      
+      function addEntriesDeleted(){
+        sending = document.getElementById("removedentries")
+        
+      }
     </script>
     <h3>
       Pool Mapping
@@ -66,16 +71,18 @@
     </form>
     <br />
     <br />
-    <table>
+    <table id="existing">
       <tr>
         <td>Employee ID</td>
         <td>Test Barcode</td>
       </tr>
       <!--INPUT-->
     </table>
-
     <form action="/pool" get="POST">
       <input id="removedentries" hidden="true" name="removedentries" value="" />
+      <button type="button" onclick="editPool()">
+        Edit
+      </button>
       <input type="submit" value="Delete" />
     </form>
   </body>
