@@ -16,10 +16,6 @@
   <body>
     <script type="text/javascript">
       rows = 0
-      function deleteRow(r) {
-        alert("clicked hersadse")
-      }
-      
       function addRow() {
         tr = document.createElement("tr")
         th = document.createElement("th")
@@ -27,13 +23,16 @@
         input.type = "text"
         input.name = "barcode" + rows
         a = document.createElement("a")
-        a.onclick = function(){
-          alert("123")
-        }
+        a.onclick = () => {
+          inputrows = document.getElementById("testbarcodes").childNodes
+          for(i )
+        };
+        a.innerHTML = "Delete row"
         th.append(input, a)
         tr.appendChild(th)
         table = document.getElementById("testbarcodes")
         table.appendChild(tr)
+        rows++
       }
     </script>
     <h3>
@@ -55,16 +54,8 @@
           </td>
           <td>
             <table id="testbarcodes">
-              <tr>
-                <th>
-                  <input type="text" name="barcode" />
-                  <a onclick="deleteRow()">
-                    Delete row
-                  </a>
-                </th>
-              </tr>
             </table>
-            <button onclick="addRow()">
+            <button onclick="addRow()" type="button">
               Add more rows
             </button>
           </td>
